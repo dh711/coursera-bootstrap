@@ -23,7 +23,7 @@
 .jumbotron {
     padding: 70px 30px 70px 30px;
     margin: 0 auto;
-    background-color: #957595;
+    background-color: #9575cd;
     color: floralwhite;
 }
 
@@ -36,4 +36,28 @@
 .copyright {
     margin-top: 25px;
     font-size: 80%;
+}
+
+.about-us {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.margin {
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 576px) {
+    .about-us {
+        padding: 0px 25px;
+    }
+
+    .flat {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 80%;
+    }
 }
