@@ -39,7 +39,7 @@
 }
 
 .margin {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 body {
@@ -59,5 +59,9 @@ body {
         align-items: center;
         justify-content: space-around;
         font-size: 80%;
+    }
+
+    .checkbox-margin {
+        margin-bottom: 17.5px;
     }
 }
