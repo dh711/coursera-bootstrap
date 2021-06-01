@@ -64,4 +64,8 @@ body {
     .checkbox-margin {
         margin-bottom: 17.5px;
     }
+
+    .reserve-btn-margin {
+        margin-top: 25px;
+    }
 }
