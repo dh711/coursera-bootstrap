@@ -82,6 +82,13 @@ body {
     min-height: 300px;
 }
 
+#carouselButton {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+}
+
 @media only screen and (max-width: 576px) {
     .flat {
         margin-top: 25px;

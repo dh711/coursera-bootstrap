@@ -154,9 +154,7 @@
             <div class="modal-dialog modal-lg" role="content">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">
-                            Reserve a Table
-                        </h4>
+                        <h4 class="modal-title">Reserve a Table</h4>
                         <button
                             type="button"
                             class="close"
@@ -260,15 +258,37 @@
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
-                                <label for="section" class="col-md-2">Section</label>
-                                <div class="btn-group btn-group-toggle col-md-10" data-toggle="buttons">
-                                    <label class="btn btn-success active">
-                                      <input type="radio" name="non-smoking" id="non-smoking" autocomplete="off" checked> Non-Smoking
+                                <label for="section" class="col-md-2"
+                                    >Section</label
+                                >
+                                <div
+                                    class="btn-group btn-group-toggle col-md-10"
+                                    data-toggle="buttons"
+                                    id="section"
+                                >
+                                    <label
+                                        for="non-smoking"
+                                        class="btn btn-success active"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="non-smoking section"
+                                            id="non-smoking"
+                                            autocomplete="off"
+                                            checked
+                                        />
+                                        Non-Smoking
                                     </label>
-                                    <label class="btn btn-danger">
-                                      <input type="radio" name="smoking" id="smoking" autocomplete="off"> Smoking
+                                    <label for="smoking" class="btn btn-danger">
+                                        <input
+                                            type="radio"
+                                            name="smoking section"
+                                            id="smoking"
+                                            autocomplete="off"
+                                        />
+                                        Smoking
                                     </label>
-                                  </div>
+                                </div>
                             </div>
                             <div class="form-group row">
                                 <label for="date" class="col-md-2"
@@ -462,6 +482,20 @@
                         >
                             <span class="carousel-control-next-icon"></span>
                         </a>
+                        <div class="btn-group" id="carouselButton">
+                            <button
+                                class="btn btn-danger btn-small"
+                                id="carousel-pause"
+                            >
+                                <span class="fa fa-pause"></span>
+                            </button>
+                            <button
+                                class="btn btn-danger btn-small"
+                                id="carousel-play"
+                            >
+                                <span class="fa fa-play"></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -628,6 +662,16 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#mycarousel").carousel({ interval: 2000 });
+                $("#carousel-pause").click(function () {
+                    $("#mycarousel").carousel("pause");
+                });
+                $("#mycarousel").carousel({ interval: 2000 });
+                $("#carousel-play").click(function () {
+                    $("#mycarousel").carousel("cycle");
+                });
             });
         </script>
     </body>
