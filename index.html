@@ -67,11 +67,7 @@
                         </li>
                     </ul>
                     <span class="navbar-text ml-auto">
-                        <a
-                            href=""
-                            data-toggle="modal"
-                            data-target="#loginModal"
-                        >
+                        <a href="#" id="loginButton">
                             <span class="fa fa-sign-in"></span> &nbsp;Login
                         </a>
                     </span>
@@ -362,8 +358,7 @@
                             href="#"
                             class="btn btn-block btn-warning"
                             role="button"
-                            data-toggle="modal"
-                            data-target="#reserveModal"
+                            id="reserveButton"
                             >Reserve Table</a
                         >
                     </div>
@@ -656,6 +651,7 @@
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script>
             $(document).ready(function () {
+                // Carousel controls.
                 $("#mycarousel").carousel({ interval: 2000 });
                 $("#carouselButton").click(function () {
                     if (
@@ -683,6 +679,16 @@
                             .children("span")
                             .addClass("fa-pause");
                     }
+                });
+
+                // Show/hide login modal.
+                $("#loginButton").click(function () {
+                    $("#loginModal").modal("toggle");
+                });
+
+                // Show/hide reserve table modal.
+                $("#reserveButton").click(function () {
+                    $("#reserveModal").modal("toggle");
                 });
             });
         </script>

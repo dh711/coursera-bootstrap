@@ -3,12 +3,30 @@ $background-dark: #512da8;
 $background-light: #9575cd;
 $background-pale: #d1c4e9;
 
-// Height variables
+// Height variables.
 $carousel-item-height: 300px;
+
+// Customizing modals.
+.modal-header {
+    color: floralwhite;
+    background-color: $background-dark;
+
+    button {
+        color: floralwhite;
+    }
+}
+
+.modal-body {
+    background-color: $background-pale;
+}
 
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
     margin: 0px auto;
     padding: $pad-up-dn $pad-left-right;
+}
+
+* {
+    font-family: "Inter", sans-serif;
 }
 
 .row-header {
